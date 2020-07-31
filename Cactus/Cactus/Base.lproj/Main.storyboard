@@ -16,19 +16,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvW-1Y-e8r">
-                                <rect key="frame" x="236" y="279" width="46" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Cactus app!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lh-ZO-a8q">
+                                <rect key="frame" x="16" y="68" width="268" height="172"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <color key="textColor" name="onboardingFontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboardImage1" translatesAutoresizingMaskIntoConstraints="NO" id="UFg-U5-iui">
+                                <rect key="frame" x="16" y="326" width="382" height="208"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvW-1Y-e8r">
+                                <rect key="frame" x="247" y="706" width="151" height="56"/>
+                                <color key="backgroundColor" name="primaryColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
                                 <connections>
                                     <action selector="didTapNextButton" destination="qdH-zI-Qz4" eventType="touchUpInside" id="fIM-X3-80O"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Z6-1u-tiB" firstAttribute="trailing" secondItem="8Lh-ZO-a8q" secondAttribute="trailing" constant="130" id="0VQ-p5-6u1"/>
+                            <constraint firstItem="LvW-1Y-e8r" firstAttribute="top" secondItem="UFg-U5-iui" secondAttribute="bottom" constant="24" id="0yb-as-O3g"/>
+                            <constraint firstItem="8Lh-ZO-a8q" firstAttribute="leading" secondItem="8Z6-1u-tiB" secondAttribute="leading" constant="16" id="9VC-cP-flT"/>
+                            <constraint firstItem="8Z6-1u-tiB" firstAttribute="trailing" secondItem="LvW-1Y-e8r" secondAttribute="trailing" constant="16" id="CGf-do-pkx"/>
+                            <constraint firstItem="UFg-U5-iui" firstAttribute="top" secondItem="8Lh-ZO-a8q" secondAttribute="bottom" constant="86" id="EmV-a0-B8P"/>
+                            <constraint firstItem="8Lh-ZO-a8q" firstAttribute="top" secondItem="8Z6-1u-tiB" secondAttribute="top" constant="24" id="Lje-0L-GaN"/>
+                            <constraint firstItem="8Z6-1u-tiB" firstAttribute="trailing" secondItem="UFg-U5-iui" secondAttribute="trailing" constant="16" id="PtP-pD-E9N"/>
+                            <constraint firstItem="8Z6-1u-tiB" firstAttribute="trailing" secondItem="LvW-1Y-e8r" secondAttribute="trailing" constant="16" id="Yy5-6e-n1f"/>
+                            <constraint firstItem="LvW-1Y-e8r" firstAttribute="top" secondItem="UFg-U5-iui" secondAttribute="bottom" constant="24" id="jpa-hO-beG"/>
+                            <constraint firstItem="UFg-U5-iui" firstAttribute="leading" secondItem="8Z6-1u-tiB" secondAttribute="leading" constant="16" id="k3f-DE-ged"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8Z6-1u-tiB"/>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="LvW-1Y-e8r" id="LJQ-Sm-fqG"/>
+                        <outlet property="uiImage" destination="UFg-U5-iui" id="6VA-4P-YQI"/>
+                        <outlet property="uiLabel" destination="8Lh-ZO-a8q" id="Erk-M5-ZBV"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="showSession" modalPresentationStyle="fullScreen" id="Ggb-5e-32M"/>
                     </connections>
                 </viewController>
@@ -75,6 +102,7 @@
                     <connections>
                         <outlet property="cactusImageView" destination="cWg-RR-U48" id="3Zx-ID-r1w"/>
                         <outlet property="plantButtonView" destination="CNV-SV-bF5" id="foS-HB-ynL"/>
+                        <segue destination="Dhq-Qx-92s" kind="presentation" identifier="showBreakSession" modalPresentationStyle="fullScreen" id="Tdt-z5-4NZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,11 +117,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBA-hc-Hrx">
-                                <rect key="frame" x="20" y="44" width="46" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="X"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQl-94-3Dj">
                                 <rect key="frame" x="35" y="508" width="344" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -108,6 +131,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBA-hc-Hrx">
+                                <rect key="frame" x="20" y="44" width="188" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="stopIcon"/>
+                                <connections>
+                                    <action selector="didTapCloseButton" destination="Dhq-Qx-92s" eventType="touchUpInside" id="toa-r7-VWE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="Go3-14-eWB"/>
@@ -125,8 +156,13 @@
     </scenes>
     <resources>
         <image name="cactus_1" width="564" height="846"/>
+        <image name="onboardImage1" width="336" height="208"/>
+        <image name="stopIcon" width="188" height="44"/>
         <namedColor name="backgroundColor">
             <color red="0.99199998378753662" green="0.96899998188018799" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onboardingFontColor">
+            <color red="0.875" green="0.30199998617172241" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryColor">
             <color red="0.10999999940395355" green="0.42399999499320984" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

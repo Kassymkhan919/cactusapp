@@ -26,7 +26,8 @@ class SessionViewController: UIViewController {
 
     
     @IBAction func didTapPlantButton() {
-        print("Start Session")
+//        print("Start Session")
+        performSegue(withIdentifier: "showBreakSession", sender: nil)
     }
 }
 

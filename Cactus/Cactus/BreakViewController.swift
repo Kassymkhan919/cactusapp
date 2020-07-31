@@ -9,7 +9,8 @@
 import UIKit
 
 class BreakViewController: UIViewController {
-
+    
+    
     @IBOutlet var cactusImageView: UIImageView!
     
     override func viewDidLoad() {
@@ -17,6 +18,10 @@ class BreakViewController: UIViewController {
 
        cactusImageView.layer.cornerRadius = cactusImageView.frame.width / 2
         cactusImageView.layer.masksToBounds = true
+    }
+    
+    @IBAction func didTapCloseButton() {
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
    
 }
