@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7118C6A24D4A05900AC572C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7118C6924D4A05900AC572C /* Session.swift */; };
+		D7118C6C24D4A0F900AC572C /* SessionManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7118C6B24D4A0F900AC572C /* SessionManagerDelegate.swift */; };
+		D76EE9AB24D4B57C0098E582 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EE9AA24D4B57C0098E582 /* CountdownTimer.swift */; };
+		D76EE9AF24D4E06C0098E582 /* BreakManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EE9AE24D4E06C0098E582 /* BreakManagerDelegate.swift */; };
+		D76EE9B124D4E53A0098E582 /* Break.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EE9B024D4E53A0098E582 /* Break.swift */; };
 		E823292224D2387500FED765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823292124D2387500FED765 /* AppDelegate.swift */; };
 		E823292624D2387500FED765 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823292524D2387500FED765 /* SessionViewController.swift */; };
 		E823292924D2387500FED765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E823292724D2387500FED765 /* Main.storyboard */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7118C6924D4A05900AC572C /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		D7118C6B24D4A0F900AC572C /* SessionManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerDelegate.swift; sourceTree = "<group>"; };
+		D76EE9AA24D4B57C0098E582 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
+		D76EE9AE24D4E06C0098E582 /* BreakManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakManagerDelegate.swift; sourceTree = "<group>"; };
+		D76EE9B024D4E53A0098E582 /* Break.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Break.swift; sourceTree = "<group>"; };
 		E823291E24D2387500FED765 /* Cactus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cactus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E823292124D2387500FED765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E823292524D2387500FED765 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +49,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7118C6624D49FA600AC572C /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				D7118C6824D4A01600AC572C /* Controller */,
+				D7118C6724D49FE500AC572C /* Model */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		D7118C6724D49FE500AC572C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7118C6924D4A05900AC572C /* Session.swift */,
+				D7118C6B24D4A0F900AC572C /* SessionManagerDelegate.swift */,
+				D76EE9AA24D4B57C0098E582 /* CountdownTimer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7118C6824D4A01600AC572C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E823292524D2387500FED765 /* SessionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D76EE9AC24D4E04B0098E582 /* Break */ = {
+			isa = PBXGroup;
+			children = (
+				D76EE9B424D4F2280098E582 /* Controller */,
+				D76EE9AD24D4E0530098E582 /* Model */,
+			);
+			path = Break;
+			sourceTree = "<group>";
+		};
+		D76EE9AD24D4E0530098E582 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D76EE9AE24D4E06C0098E582 /* BreakManagerDelegate.swift */,
+				D76EE9B024D4E53A0098E582 /* Break.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D76EE9B424D4F2280098E582 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E86B8E9F24D28F5500E82A42 /* BreakViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		E823291524D2387500FED765 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +121,14 @@
 		E823292024D2387500FED765 /* Cactus */ = {
 			isa = PBXGroup;
 			children = (
+				D76EE9AC24D4E04B0098E582 /* Break */,
+				D7118C6624D49FA600AC572C /* Session */,
 				E823292124D2387500FED765 /* AppDelegate.swift */,
-				E823292524D2387500FED765 /* SessionViewController.swift */,
 				E823292724D2387500FED765 /* Main.storyboard */,
 				E823292A24D2387C00FED765 /* Assets.xcassets */,
 				E823292C24D2387C00FED765 /* LaunchScreen.storyboard */,
 				E823292F24D2387C00FED765 /* Info.plist */,
 				E86B8E9D24D24FC300E82A42 /* onboardingViewController.swift */,
-				E86B8E9F24D28F5500E82A42 /* BreakViewController.swift */,
 			);
 			path = Cactus;
 			sourceTree = "<group>";
@@ -141,7 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76EE9AF24D4E06C0098E582 /* BreakManagerDelegate.swift in Sources */,
+				D7118C6A24D4A05900AC572C /* Session.swift in Sources */,
+				D7118C6C24D4A0F900AC572C /* SessionManagerDelegate.swift in Sources */,
 				E86B8EA024D28F5500E82A42 /* BreakViewController.swift in Sources */,
+				D76EE9B124D4E53A0098E582 /* Break.swift in Sources */,
+				D76EE9AB24D4B57C0098E582 /* CountdownTimer.swift in Sources */,
 				E86B8E9E24D24FC300E82A42 /* onboardingViewController.swift in Sources */,
 				E823292624D2387500FED765 /* SessionViewController.swift in Sources */,
 				E823292224D2387500FED765 /* AppDelegate.swift in Sources */,

@@ -148,6 +148,7 @@ class BreakView: BreakManagerDelegate {
 
 
 let breakView = BreakView()
+breakView.breakManager = BreakManager(breakDelegate: breakView)
 breakView.userStartedBreak(durationInSeconds: 5)
 
 
@@ -177,75 +178,3 @@ breakView.userStartedBreak(durationInSeconds: 5)
 
 
 
-
-
-//struct Break {
-//    let durationInSeconds: Int
-//}
-//
-//protocol BreakManagerDelegate {
-//    func breakDidStart(aBreak: Break)
-//    func breakTimeLeftChanged(secondsLeft: Int)
-//    func breakDidEnd(aBreak: Break)
-//    func breakDidCancel()
-//}
-//
-//class BreakManager {
-//    let delegate: BreakManagerDelegate
-//
-//    var breakTimer: Timer?
-//
-//    init(delegate: BreakManagerDelegate) {
-//        self.delegate = delegate
-//    }
-//
-//    func startBreak(aBreak: Break) {
-//        breakTimer = Timer(durationInSeconds: aBreak.durationInSeconds) { secondsLeft in
-//            if secondsLeft == 0 {
-//                self.delegate.breakDidEnd(aBreak: aBreak)
-//            } else {
-//                self.delegate.breakTimeLeftChanged(secondsLeft: secondsLeft)
-//            }
-//        }
-//
-//
-//        breakTimer?.start()
-//        delegate.breakDidStart(aBreak: aBreak)
-//    }
-//
-//    func cancelBreak() {
-//        self.breakTimer?.invalidate()
-//        self.breakTimer = nil
-//        delegate.breakDidCancel()
-//    }
-//}
-//
-//class BreakView: BreakManagerDelegate {
-//    var breakManager: BreakManager?
-//
-//    func userStartedBreak(durationInSeconds: Int) {
-//        let aBreak = Break(durationInSeconds: durationInSeconds)
-//        breakManager?.startBreak(aBreak: aBreak)
-//    }
-//
-//    func breakDidStart(aBreak: Break) {
-//        print("break started")
-//        showTimeLeft(secondsLeft: aBreak.durationInSeconds)
-//    }
-//
-//    func breakTimeLeftChanged(secondsLeft: Int) {
-//        showTimeLeft(secondsLeft: secondsLeft)
-//    }
-//
-//    func breakDidEnd(aBreak: Break) {
-//        print("break ended")
-//    }
-//
-//    func breakDidCancel() {
-//        print("break cancelled")
-//    }
-//
-//    func showTimeLeft(secondsLeft: Int) {
-//        print(secondsLeft)
-//    }
-//}

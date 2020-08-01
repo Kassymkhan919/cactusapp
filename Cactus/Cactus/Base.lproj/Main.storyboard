@@ -83,9 +83,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNV-SV-bF5">
-                                <rect key="frame" x="35" y="514" width="344" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNV-SV-bF5">
+                                <rect key="frame" x="35" y="619" width="344" height="56"/>
                                 <color key="backgroundColor" name="primaryColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Plant">
@@ -95,12 +94,41 @@
                                     <action selector="didTapPlantButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="dgB-kh-Kjj"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SG2-NG-27h">
+                                <rect key="frame" x="0.0" y="410" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of1-cU-4Vk">
+                                <rect key="frame" x="16" y="531" width="382" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Give Up">
+                                    <color key="titleColor" name="darkGrey"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapGiveUp" destination="BYZ-38-t0r" eventType="touchUpInside" id="aEe-tM-uoP"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5:36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s3-3e-7MR">
+                                <rect key="frame" x="144" y="444" width="126" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" name="primaryColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686274509807" green="0.96862745098039216" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Of1-cU-4Vk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8iF-ex-VQV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Of1-cU-4Vk" secondAttribute="trailing" constant="16" id="GK3-eT-mbU"/>
+                            <constraint firstItem="CNV-SV-bF5" firstAttribute="top" secondItem="Of1-cU-4Vk" secondAttribute="bottom" constant="291" id="M8X-ft-SCX"/>
+                            <constraint firstItem="Of1-cU-4Vk" firstAttribute="top" secondItem="9s3-3e-7MR" secondAttribute="bottom" constant="465" id="pMG-po-sKG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="cactusImageView" destination="cWg-RR-U48" id="3Zx-ID-r1w"/>
+                        <outlet property="countdownLabel" destination="9s3-3e-7MR" id="FtM-Ed-7Mz"/>
+                        <outlet property="giveUpButton" destination="Of1-cU-4Vk" id="Lu0-Xs-ake"/>
+                        <outlet property="pickerView" destination="SG2-NG-27h" id="suF-94-6zK"/>
                         <outlet property="plantButtonView" destination="CNV-SV-bF5" id="foS-HB-ynL"/>
                         <segue destination="Dhq-Qx-92s" kind="presentation" identifier="showBreakSession" modalPresentationStyle="fullScreen" id="Tdt-z5-4NZ"/>
                     </connections>
@@ -117,22 +145,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cactus_1" translatesAutoresizingMaskIntoConstraints="NO" id="BXo-rY-aH1">
+                                <rect key="frame" x="101" y="167" width="213" height="213"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5XF-fO-GPQ">
+                                <rect key="frame" x="0.0" y="388" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5:36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvy-N9-lMp">
+                                <rect key="frame" x="144" y="405" width="126" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" name="primaryColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQl-94-3Dj">
-                                <rect key="frame" x="35" y="508" width="344" height="56"/>
+                                <rect key="frame" x="35" y="612" width="344" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="primaryColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Take a break!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapTakeBreakButton" destination="Dhq-Qx-92s" eventType="touchUpInside" id="wED-uH-RLV"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cactus_1" translatesAutoresizingMaskIntoConstraints="NO" id="BXo-rY-aH1">
-                                <rect key="frame" x="101" y="204" width="213" height="213"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ram-la-rQp">
+                                <rect key="frame" x="36" y="477" width="343" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Finish Break">
+                                    <color key="titleColor" name="darkGrey"/>
+                                </state>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBA-hc-Hrx">
-                                <rect key="frame" x="20" y="44" width="188" height="44"/>
+                                <rect key="frame" x="20" y="44" width="59" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="stopIcon"/>
                                 <connections>
@@ -147,6 +197,10 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cactusImageView" destination="BXo-rY-aH1" id="ien-sN-f0U"/>
+                        <outlet property="countdownLabel" destination="Uvy-N9-lMp" id="fwA-4S-mlO"/>
+                        <outlet property="finishBreakButton" destination="ram-la-rQp" id="s0L-C0-j2s"/>
+                        <outlet property="pickerView" destination="5XF-fO-GPQ" id="mMh-Gx-I5q"/>
+                        <outlet property="takeBreakButtonView" destination="IQl-94-3Dj" id="CcJ-Vc-2ob"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RzY-fe-GkW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -157,9 +211,12 @@
     <resources>
         <image name="cactus_1" width="564" height="846"/>
         <image name="onboardImage1" width="336" height="208"/>
-        <image name="stopIcon" width="188" height="44"/>
+        <image name="stopIcon" width="24" height="24"/>
         <namedColor name="backgroundColor">
             <color red="0.99199998378753662" green="0.96899998188018799" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkGrey">
+            <color red="0.19200000166893005" green="0.17599999904632568" blue="0.16500000655651093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="onboardingFontColor">
             <color red="0.875" green="0.30199998617172241" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
