@@ -34,6 +34,7 @@ class SessionManager {
         // decrease timer every 1 sec
         timer = CountdownTimer(durationInSeconds: session.durationInSeconds) {secondsLeft in
             if secondsLeft == 0 {
+                SessionsStorage.shared.addSession(session)
                 self.sessionDelegate.showSessionEnded(session: session)
             }
             else {

@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		D7118C6A24D4A05900AC572C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7118C6924D4A05900AC572C /* Session.swift */; };
 		D7118C6C24D4A0F900AC572C /* SessionManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7118C6B24D4A0F900AC572C /* SessionManagerDelegate.swift */; };
+		D74286E624D8E46C003A0B5F /* CactusTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74286E524D8E46C003A0B5F /* CactusTabBarController.swift */; };
+		D765E04F24DAA90900D8CAA5 /* SessionsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D765E04E24DAA90900D8CAA5 /* SessionsListTableViewCell.swift */; };
 		D76EE9AB24D4B57C0098E582 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EE9AA24D4B57C0098E582 /* CountdownTimer.swift */; };
 		D76EE9AF24D4E06C0098E582 /* BreakManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EE9AE24D4E06C0098E582 /* BreakManagerDelegate.swift */; };
 		D76EE9B124D4E53A0098E582 /* Break.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EE9B024D4E53A0098E582 /* Break.swift */; };
+		D7E02F8424DA222100ACB97B /* SessionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E02F8324DA222100ACB97B /* SessionsListViewController.swift */; };
+		D7E02F8624DA22A300ACB97B /* SessionsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E02F8524DA22A300ACB97B /* SessionsStorage.swift */; };
 		E823292224D2387500FED765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823292124D2387500FED765 /* AppDelegate.swift */; };
 		E823292624D2387500FED765 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823292524D2387500FED765 /* SessionViewController.swift */; };
 		E823292924D2387500FED765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E823292724D2387500FED765 /* Main.storyboard */; };
@@ -24,9 +28,13 @@
 /* Begin PBXFileReference section */
 		D7118C6924D4A05900AC572C /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		D7118C6B24D4A0F900AC572C /* SessionManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerDelegate.swift; sourceTree = "<group>"; };
+		D74286E524D8E46C003A0B5F /* CactusTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CactusTabBarController.swift; sourceTree = "<group>"; };
+		D765E04E24DAA90900D8CAA5 /* SessionsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsListTableViewCell.swift; sourceTree = "<group>"; };
 		D76EE9AA24D4B57C0098E582 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		D76EE9AE24D4E06C0098E582 /* BreakManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakManagerDelegate.swift; sourceTree = "<group>"; };
 		D76EE9B024D4E53A0098E582 /* Break.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Break.swift; sourceTree = "<group>"; };
+		D7E02F8324DA222100ACB97B /* SessionsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsListViewController.swift; sourceTree = "<group>"; };
+		D7E02F8524DA22A300ACB97B /* SessionsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsStorage.swift; sourceTree = "<group>"; };
 		E823291E24D2387500FED765 /* Cactus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cactus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E823292124D2387500FED765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E823292524D2387500FED765 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +84,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		D74286E424D8E422003A0B5F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D74286E524D8E46C003A0B5F /* CactusTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		D76EE9AC24D4E04B0098E582 /* Break */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +118,16 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		D7E02F8224DA21E900ACB97B /* SessionsList */ = {
+			isa = PBXGroup;
+			children = (
+				D7E02F8324DA222100ACB97B /* SessionsListViewController.swift */,
+				D7E02F8524DA22A300ACB97B /* SessionsStorage.swift */,
+				D765E04E24DAA90900D8CAA5 /* SessionsListTableViewCell.swift */,
+			);
+			path = SessionsList;
+			sourceTree = "<group>";
+		};
 		E823291524D2387500FED765 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +147,8 @@
 		E823292024D2387500FED765 /* Cactus */ = {
 			isa = PBXGroup;
 			children = (
+				D7E02F8224DA21E900ACB97B /* SessionsList */,
+				D74286E424D8E422003A0B5F /* TabBar */,
 				D76EE9AC24D4E04B0098E582 /* Break */,
 				D7118C6624D49FA600AC572C /* Session */,
 				E823292124D2387500FED765 /* AppDelegate.swift */,
@@ -204,15 +232,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E02F8424DA222100ACB97B /* SessionsListViewController.swift in Sources */,
 				D76EE9AF24D4E06C0098E582 /* BreakManagerDelegate.swift in Sources */,
 				D7118C6A24D4A05900AC572C /* Session.swift in Sources */,
 				D7118C6C24D4A0F900AC572C /* SessionManagerDelegate.swift in Sources */,
+				D7E02F8624DA22A300ACB97B /* SessionsStorage.swift in Sources */,
 				E86B8EA024D28F5500E82A42 /* BreakViewController.swift in Sources */,
+				D74286E624D8E46C003A0B5F /* CactusTabBarController.swift in Sources */,
 				D76EE9B124D4E53A0098E582 /* Break.swift in Sources */,
 				D76EE9AB24D4B57C0098E582 /* CountdownTimer.swift in Sources */,
 				E86B8E9E24D24FC300E82A42 /* onboardingViewController.swift in Sources */,
 				E823292624D2387500FED765 /* SessionViewController.swift in Sources */,
 				E823292224D2387500FED765 /* AppDelegate.swift in Sources */,
+				D765E04F24DAA90900D8CAA5 /* SessionsListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
